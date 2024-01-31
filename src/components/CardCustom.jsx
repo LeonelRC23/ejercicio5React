@@ -6,7 +6,11 @@ const CardCustom = () => {
   const [tarea, setTarea] = useState([]);
   const onKeyEnter = (e) => {
     if (e.key == "Enter") {
-      setTarea([...tarea, e.target.value]);
+      if (e.target.value.trim().length !== 0) {
+        setTarea([...tarea, e.target.value]);
+      } else {
+        alert("Ingrese una tarea.")
+      }
     }
   };
   return (
