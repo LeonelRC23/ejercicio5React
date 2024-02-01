@@ -35,8 +35,8 @@ const CardCustom = () => {
         </div>
         <div>
           <ul>
-            {tarea.map((t, p) => (
-              <Task task={t} key={p} />
+            {tarea.map((element) => (
+              <Task task={element.desc} key={element.id} />
             ))}
           </ul>
         </div>
