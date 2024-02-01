@@ -3,9 +3,9 @@ import { Button } from 'react-bootstrap';
 
 const Task = ({ task }) => {
   return (
-    <li className='d-flex justify-content-between'>
+    <li className='d-flex justify-content-between my-2'>
       {task}
-      <Button className='btn-light'>X</Button>
+      <Button className='btn-light'>x</Button>
     </li>
   );
 };

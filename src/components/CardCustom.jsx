@@ -7,7 +7,19 @@ const CardCustom = () => {
   const onKeyEnter = (e) => {
     if (e.key == 'Enter') {
       if (e.target.value.trim().length !== 0) {
-        setTarea([...tarea, e.target.value]);
+        let object;
+        if (tarea.length == 0) {
+           object = {
+            id: 1,
+            desc: e.target.value.trim(),
+          };
+        } else {
+           object = {
+            id: tarea[tarea.length - 1].id + 1,
+            desc: e.target.value.trim(),
+          };
+        }
+        setTarea([...tarea, object]);
       } else {
         alert('Ingrese una tarea.');
       }
